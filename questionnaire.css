@@ -1,0 +1,223 @@
+/* Reset and base styles */
+.delfina-container * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.delfina-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+.delfina-header {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.delfina-header h1 {
+  color: #e91e63;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.delfina-header p {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Content layout */
+.delfina-content {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Questions section */
+.delfina-questions h2 {
+  color: #e91e63;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.question-item {
+  background: #f8f9fa;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.question-item p {
+  color: #333;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.question-options {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.question-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.question-options input[type="radio"] {
+  cursor: pointer;
+}
+
+/* Submit button */
+.submit-button {
+  background-color: #e0e0e0;
+  color: #9e9e9e;
+  border: none;
+  padding: 1.2rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: not-allowed;
+  margin-top: 2rem;
+  width: 100%;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button-active {
+  background-color: #e91e63;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(233, 30, 99, 0.2);
+}
+
+.submit-button-active:hover {
+  background-color: #d81b60;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 8px rgba(233, 30, 99, 0.25);
+}
+
+.submit-button:disabled {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Tips section */
+.delfina-tips {
+  background: #e91e63;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+
+.delfina-tips h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tips-list {
+  list-style: none;
+}
+
+.tips-list li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.4;
+}
+
+.tips-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: white;
+}
+
+/* Results section */
+.result-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #f5f5f5;
+}
+
+.result-section h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.result-box {
+  padding: 2.5rem;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.result-count {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.result-icon {
+  font-size: 2rem;
+}
+
+.result-message {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  letter-spacing: 0.2px;
+}
+
+/* Result box variations */
+.high-risk {
+  background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+}
+
+.medium-risk {
+  background: linear-gradient(135deg, #ff4081 0%, #f50057 100%);
+}
+
+.low-risk {
+  background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .delfina-content {
+    grid-template-columns: 1fr;
+  }
+
+  .delfina-container {
+    padding: 1rem;
+  }
+
+  .delfina-header h1 {
+    font-size: 2rem;
+  }
+}
