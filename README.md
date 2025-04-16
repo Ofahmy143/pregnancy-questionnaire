@@ -29,6 +29,7 @@ Add the following code to your HTML where you want the questionnaire to appear:
 - Mobile-responsive design
 - Easy to integrate
 - Customizable styling through CSS
+- Multilingual Support (en - es)
 
 ## Installation Options
 
