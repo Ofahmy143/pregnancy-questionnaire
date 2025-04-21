@@ -182,6 +182,8 @@
 
 /* Tips section */
 .delfina-tips {
+  max-width: fit-content;
+  margin-left: auto;
   background: #e91e63;
   color: white;
   padding: 1.5rem;
@@ -197,22 +199,32 @@
 
 .tips-list {
   list-style: none;
-  font-size: 1rem;
-  line-height: 1.6;
+  padding: 0;
+  margin: 0;
 }
 
 .tips-list li {
-  margin-bottom: 1rem;
-  padding-left: 1.25rem;
   position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
 }
 
 .tips-list li::before {
   content: "•";
-  font-size: 1.25rem;
   position: absolute;
-  left: 0;
-  top: -0.125rem;
+  left: 0.5rem;
+  top: 0;
+}
+
+/* Special styling for the last tip - no bullet and bold */
+.tips-list li:last-child {
+  padding-left: 0;
+  font-weight: 600;
+}
+
+.tips-list li:last-child::before {
+  content: none;
 }
 
 /* Results section */
@@ -230,6 +242,7 @@
 }
 
 .result-box {
+  max-width: fit-content;
   padding: 1.5rem;
   border-radius: 4px;
   transition: background-color 0.3s ease;
@@ -239,6 +252,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -267,25 +281,26 @@
 }
 
 .result-message {
+  max-width: 600px;
   line-height: 1.6;
   font-size: 1rem;
   margin-top: 0.875rem;
 }
 
 /* Result box variations */
-.high-risk {
-  background-color: #ffebee; /* Light red background */
-  border-left: 4px solid #f44336;
+.low-risk {
+  background-color: #c8e6c9;
+  border-left: 4px solid #2e7d32;
 }
 
 .medium-risk {
-  background-color: #fff3e0; /* Light yellow background */
-  border-left: 4px solid #ff9800;
+  background-color: #ffe0b2;
+  border-left: 4px solid #f57c00;
 }
 
-.low-risk {
-  background-color: #e8f5e9; /* Light green background */
-  border-left: 4px solid #4caf50;
+.high-risk {
+  background-color: #ffcdd2;
+  border-left: 4px solid #c62828;
 }
 
 /* Responsive design */
