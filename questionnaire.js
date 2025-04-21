@@ -166,107 +166,47 @@ class DelfinaQuestionnaire {
     const ui = this.languages[this.currentLang].ui;
 
     container.innerHTML = `
-            <div class="delfina-container">
-                <div class="delfina-header">
-                    <div class="header-content">
-                        <h1>${ui.title}</h1>
-                        <div class="language-selector">
-                            <button class="lang-dropdown-btn">
-                                <span class="globe-icon">🌐</span>
-                                <span class="current-lang">${this.currentLang.toUpperCase()}</span>
-                                <span class="dropdown-arrow">▼</span>
-                            </button>
-                            <div class="lang-dropdown-content">
-                                <a href="#" data-lang="en" class="${
-                                  this.currentLang === "en" ? "active" : ""
-                                }">English</a>
-                                <a href="#" data-lang="es" class="${
-                                  this.currentLang === "es" ? "active" : ""
-                                }">Español</a>
-                            </div>
-                        </div>
-                    </div>
-                    <p>${ui.subtitle}</p>
-                </div>
-                <div class="delfina-content">
-                    <div class="delfina-questions">
-                        <h2>${ui.quizTitle}</h2>
-                        <div class="questions-list"></div>
-                        <button class="submit-button" onclick="window.delfinaQuestionnaire.handleSubmit()" disabled>${
-                          ui.submit
-                        }</button>
-                    </div>
-                    <div class="delfina-tips">
-                        <h2>${ui.tipsTitle}</h2>
-                        <ul class="tips-list"></ul>
-                    </div>
-                </div>
-                <div class="result-section" style="display: none;">
-                    <h2>${ui.results}</h2>
-                    <div class="result-content"></div>
-                </div>
+      <div class="delfina-container">
+        <div class="delfina-header">
+          <div class="header-content">
+            <h1>${ui.title}</h1>
+            <div class="language-selector">
+              <button class="lang-dropdown-btn">
+                <span class="globe-icon">🌐</span>
+                <span class="current-lang">${this.currentLang.toUpperCase()}</span>
+                <span class="dropdown-arrow">▼</span>
+              </button>
+              <div class="lang-dropdown-content">
+                <a href="#" data-lang="en" class="${
+                  this.currentLang === "en" ? "active" : ""
+                }">English</a>
+                <a href="#" data-lang="es" class="${
+                  this.currentLang === "es" ? "active" : ""
+                }">Español</a>
+              </div>
             </div>
-            <style>
-                .header-content {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin-bottom: 1rem;
-                }
-                .language-selector {
-                    position: relative;
-                    display: inline-block;
-                }
-                .lang-dropdown-btn {
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    padding: 8px 12px;
-                    border: 1px solid #ddd;
-                    background: white;
-                    cursor: pointer;
-                    border-radius: 4px;
-                    transition: all 0.3s ease;
-                }
-                .lang-dropdown-btn:hover {
-                    background: #f0f0f0;
-                }
-                .globe-icon {
-                    font-size: 1.2em;
-                }
-                .dropdown-arrow {
-                    font-size: 0.8em;
-                    color: #666;
-                }
-                .lang-dropdown-content {
-                    display: none;
-                    position: absolute;
-                    right: 0;
-                    top: 100%;
-                    background: white;
-                    min-width: 120px;
-                    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-                    border-radius: 4px;
-                    z-index: 1000;
-                }
-                .language-selector.active .lang-dropdown-content {
-                    display: block;
-                }
-                .lang-dropdown-content a {
-                    display: block;
-                    padding: 8px 12px;
-                    text-decoration: none;
-                    color: #333;
-                }
-                .lang-dropdown-content a:hover {
-                    background: #f0f0f0;
-                }
-                .lang-dropdown-content a.active {
-                    background: #007bff;
-                    color: white;
-                }
-            </style>
-        `;
+          </div>
+          <p>${ui.subtitle}</p>
+        </div>
+        <div class="delfina-content">
+          <div class="delfina-questions">
+            <h2>${ui.quizTitle}</h2>
+            <div class="questions-list"></div>
+          </div>
+          <div class="delfina-tips">
+            <h2>${ui.tipsTitle}</h2>
+            <ul class="tips-list"></ul>
+          </div>
+        </div>
+        <div class="result-section" style="display: none;">
+          <h2>${ui.results}</h2>
+          <div class="result-content"></div>
+        </div>
+        <div class="logo-placeholder">
+          <img src="./logomark.svg" alt="Logo" /> open sourced with &#10084; by Delfina
+        </div>
+      </div>
+    `;
 
     this.renderQuestions();
     this.renderTips();
@@ -311,7 +251,6 @@ class DelfinaQuestionnaire {
 
   setupValidation() {
     const radios = document.querySelectorAll('input[type="radio"]');
-    const submitButton = document.querySelector(".submit-button");
 
     radios.forEach((radio) => {
       radio.addEventListener("change", () => {
@@ -322,11 +261,10 @@ class DelfinaQuestionnaire {
           return Array.from(questionRadios).some((r) => r.checked);
         });
 
-        submitButton.disabled = !allQuestionsAnswered;
-        submitButton.classList.toggle(
-          "submit-button-active",
-          allQuestionsAnswered
-        );
+        // Auto submit when all questions are answered
+        if (allQuestionsAnswered) {
+          this.handleSubmit();
+        }
       });
     });
   }
@@ -377,33 +315,34 @@ class DelfinaQuestionnaire {
     });
 
     let result;
+    let riskLevel;
+    let riskIcon;
+
     if (yesCount >= 4) {
       result = this.results.high;
+      riskLevel = "high-risk";
+      riskIcon = "🚨"; // Emergency/warning light for high risk
     } else if (yesCount >= 1) {
       result = this.results.medium;
+      riskLevel = "medium-risk";
+      riskIcon = "⚠️"; // Warning symbol for medium risk
     } else {
       result = this.results.low;
+      riskLevel = "low-risk";
+      riskIcon = "✓"; // Checkmark for low risk
     }
 
     const resultSection = document.querySelector(".result-section");
     const resultContent = document.querySelector(".result-content");
     resultContent.innerHTML = `
-            <div class="result-box ${
-              yesCount >= 4
-                ? "high-risk"
-                : yesCount >= 1
-                ? "medium-risk"
-                : "low-risk"
-            }">
-                <div class="result-header">
-                    <span class="result-count">${result.count}</span>
-                    <span class="result-icon">${
-                      yesCount >= 4 ? "⚠️" : yesCount >= 1 ? "⚡" : "✅"
-                    }</span>
-                </div>
-                <p class="result-message">${result.message}</p>
-            </div>
-        `;
+      <div class="result-box ${riskLevel}">
+        <div class="result-header">
+          <span class="result-count">${result.count}</span>
+          <span class="result-icon">${riskIcon}</span>
+        </div>
+        <p class="result-message">${result.message}</p>
+      </div>
+    `;
     resultSection.style.display = "block";
     resultSection.scrollIntoView({ behavior: "smooth", block: "center" });
   }
