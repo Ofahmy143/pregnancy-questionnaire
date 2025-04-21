@@ -109,38 +109,37 @@ class DelfinaQuestionnaire {
           },
         ],
         tips: [
-          "Programe una visita preconcepcional para revisar su salud general y condiciones médicas.",
-          "Revise las medicinas, incluyendo suplementos de venta libre y suplementos de origen herbal.",
-          "El planeamiento familiar puede darle más tiempo para estar saludable antes de quedar embarazada.",
-          "Vaya a todas sus visitas prenatales y posnatales.",
-          "En asociación con su proveedor médico, cree un plan de embarazo para un embarazo saludable y un bebé saludable.",
-          "Siempre recuerde confiar en su cuerpo. Si no se siente bien, busque atención inmediatamente.",
+          "Obtenga una visita previa a la concepción para revisar la salud general y las condiciones médicas existentes.",
+          "Revise los medicamentos, incluidos los de venta libre y los suplementos herbales.",
+          "La planificación familiar puede brindarle tiempo adicional para recuperar su salud antes del embarazo.",
+          "Asista a todas sus visitas prenatales y posparto.",
+          "En colaboración con su proveedor médico, cree un plan de embarazo para tener un embarazo saludable y un bebé saludable.",
+          "Recuerde siempre confiar en su cuerpo. Si no se siente bien, busque atención médica de inmediato.",
         ],
         results: {
           high: {
             count: "4+ sí",
             message:
-              "Para tener el bebé más saludable, su salud requiere más atención antes y durante el embarazo. Puede tener condiciones de salud crónicas que requieran atención extra en el embarazo. Consulte a su proveedor de atención médica al menos 6 meses antes de intentar quedar embarazada. Puede necesitar más pruebas, nuevos medicamentos o ver a un especialista antes y durante el embarazo.",
+              "Para tener un bebé más sano, su salud requiere más atención y cercanía antes y durante el embarazo. Es posible que tenga problemas de salud crónicos que requieran atención adicional durante el embarazo. Consulte a un proveedor de atención médica al menos 6 meses antes de intentar quedar embarazada. Es posible que necesite más pruebas, nuevos medicamentos o consultar a un especialista antes y durante el embarazo. Durante el parto es posible que necesite atención médica adicional.",
           },
           medium: {
             count: "1-3 sí",
             message:
-              "Para tener el bebé más saludable, su salud probablemente requerirá más atención antes del embarazo. Consulte a su proveedor de atención médica al menos 3 meses antes de intentar quedar embarazada y cree un plan de embarazo. Puede necesitar más pruebas, nuevos medicamentos o ver a un especialista antes y durante el embarazo.",
+            "Para tener un bebé más sano, su salud probablemente requerirá más atención antes del embarazo. Consulte a un proveedor de atención médica al menos 3 meses antes de intentar quedar embarazada y elabore un plan de embarazo. Es posible que necesite más pruebas, nuevos medicamentos o consultar a un especialista antes y durante el embarazo."
           },
           low: {
             count: "0 sí",
             message:
-              "Para tener el bebé más saludable, siga los Consejos para Todos sugeridos arriba.",
+              "Para tener un bebé más sano, siga los consejos para todos los sugeridos anteriormente.",
           },
         },
         ui: {
-          title: "¿Está Pensando en Tener un Bebé?",
+          title: "¿Está pensando en tener un bebé?",
           subtitle:
-            "Su salud y bienestar son importantes. Asegurémonos de que esté fuerte y lista para cuando decida quedar embarazada.",
+            "Su salud y bienestar son importantes. Asegurémonos de que esté fuerte y preparada, para que cuando decida quedar embarazada, se sienta lo mejor posible.",
           quizTitle:
-            "Tome el Cuestionario PreMA (Evaluación Médica Preconcepcional)",
-          tipsTitle: "Consejos para Todos",
-          submit: "Enviar Cuestionario",
+            "Realice el cuestionario PreMA (Evaluación médica previa a la concepción)",
+          tipsTitle: "Consejos para todos",
           results: "Sus Resultados",
           yes: "Sí",
           no: "No",
