@@ -125,7 +125,7 @@ class DelfinaQuestionnaire {
           medium: {
             count: "1-3 sí",
             message:
-            "Para tener un bebé más sano, su salud probablemente requerirá más atención antes del embarazo. Consulte a un proveedor de atención médica al menos 3 meses antes de intentar quedar embarazada y elabore un plan de embarazo. Es posible que necesite más pruebas, nuevos medicamentos o consultar a un especialista antes y durante el embarazo."
+              "Para tener un bebé más sano, su salud probablemente requerirá más atención antes del embarazo. Consulte a un proveedor de atención médica al menos 3 meses antes de intentar quedar embarazada y elabore un plan de embarazo. Es posible que necesite más pruebas, nuevos medicamentos o consultar a un especialista antes y durante el embarazo.",
           },
           low: {
             count: "0 sí",
@@ -187,20 +187,26 @@ class DelfinaQuestionnaire {
           </div>
           <p>${ui.subtitle}</p>
         </div>
+        
         <div class="delfina-content">
           <div class="delfina-questions">
             <h2>${ui.quizTitle}</h2>
             <div class="questions-list"></div>
           </div>
           <div class="delfina-tips">
-            <h2>${ui.tipsTitle}</h2>
+            <h2>
+              <span class="tips-icon">✨</span>
+              ${ui.tipsTitle}
+            </h2>
             <ul class="tips-list"></ul>
           </div>
         </div>
+
         <div class="result-section" style="display: none;">
           <h2>${ui.results}</h2>
           <div class="result-content"></div>
         </div>
+
         <div class="logo-placeholder">
           <img src="./logomark.svg" alt="Logo" /> open sourced with &#10084; by Delfina
         </div>
