@@ -14,6 +14,9 @@
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Header styles */
@@ -24,15 +27,20 @@
 
 .delfina-header h1 {
   color: #e91e63;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   margin-bottom: 1rem;
-  font-weight: bold;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 .delfina-header p {
   color: #333;
-  font-size: 1.1rem;
-  line-height: 1.5;
+  font-size: 1.125rem;
+  font-weight: 400;
+  max-width: 720px;
+  margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
 /* Content layout */
@@ -46,8 +54,10 @@
 /* Questions section */
 .delfina-questions h2 {
   color: #e91e63;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin-bottom: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 .question-item {
@@ -59,8 +69,9 @@
 }
 
 .question-item p {
-  margin-bottom: 0.8rem;
-  font-size: 1rem;
+  margin-bottom: 0.875rem;
+  font-size: 1.0625rem;
+  font-weight: 400;
   color: #2d3748;
   line-height: 1.5;
 }
@@ -178,26 +189,30 @@
 }
 
 .delfina-tips h2 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin-bottom: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 .tips-list {
   list-style: none;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .tips-list li {
   margin-bottom: 1rem;
-  padding-left: 1.5rem;
+  padding-left: 1.25rem;
   position: relative;
-  line-height: 1.4;
 }
 
 .tips-list li::before {
   content: "•";
+  font-size: 1.25rem;
   position: absolute;
   left: 0;
-  color: white;
+  top: -0.125rem;
 }
 
 /* Results section */
@@ -228,8 +243,8 @@
 }
 
 .result-count {
-  font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .result-icon {
@@ -252,9 +267,9 @@
 }
 
 .result-message {
-  line-height: 1.8;
-  font-size: 1.1rem;
-  letter-spacing: 0.2px;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-top: 0.875rem;
 }
 
 /* Result box variations */
@@ -287,10 +302,34 @@
     font-size: 2rem;
   }
 
+  .delfina-header p {
+    font-size: 1.0625rem;
+  }
+
   .question-options label {
     display: block;
     margin-bottom: 0.5rem;
     width: fit-content;
+  }
+
+  .delfina-questions h2,
+  .delfina-tips h2,
+  .result-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .delfina-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .delfina-header p {
+    font-size: 1rem;
+  }
+
+  .question-item p {
+    font-size: 1rem;
   }
 }
 
@@ -316,6 +355,8 @@
   cursor: pointer;
   border-radius: 4px;
   transition: all 0.3s ease;
+  font-size: 0.9375rem;
+  font-weight: 500;
 }
 
 .lang-dropdown-btn:hover {
@@ -352,6 +393,8 @@
   padding: 8px 12px;
   text-decoration: none;
   color: #333;
+  font-size: 0.9375rem;
+  font-weight: 400;
 }
 
 .lang-dropdown-content a:hover {
@@ -365,9 +408,9 @@
 
 .logo-placeholder {
   text-align: center;
-  margin-top: 2rem;
-  color: #666;
-  font-size: 0.9em;
+  margin-top: 2.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
 }
 
 .logo-placeholder img {
@@ -384,9 +427,4 @@
 .result-section {
   margin-top: 2rem;
   padding: 1rem;
-}
-
-.result-message {
-  margin-top: 1rem;
-  line-height: 1.5;
 }
