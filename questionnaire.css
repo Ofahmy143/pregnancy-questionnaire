@@ -51,17 +51,18 @@
 }
 
 .question-item {
-  background: #f8f9fa;
+  margin-bottom: 1.5rem;
   padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 6px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .question-item p {
-  color: #333;
   margin-bottom: 0.8rem;
   font-size: 1rem;
-  line-height: 1.4;
+  color: #2d3748;
+  line-height: 1.5;
 }
 
 .question-options {
@@ -70,14 +71,66 @@
 }
 
 .question-options label {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  margin-right: 2rem;
   cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 16px;
+  transition: all 0.2s ease;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+}
+
+.question-options label:hover {
+  background: #f0f0f0;
 }
 
 .question-options input[type="radio"] {
-  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #757575;
+  border-radius: 50%;
+  margin-right: 6px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.question-options input[type="radio"]:checked {
+  border-color: #4a5568;
+  background: #4a5568;
+}
+
+.question-options input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Active state for labels */
+.question-options input[type="radio"]:checked + span {
+  color: #4a5568;
+  font-weight: 500;
+}
+
+/* Hover effects */
+.question-options label:hover input[type="radio"] {
+  border-color: #4a5568;
+}
+
+/* Focus state for accessibility */
+.question-options input[type="radio"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(74, 85, 104, 0.2);
 }
 
 /* Submit button */
@@ -233,6 +286,12 @@
   .delfina-header h1 {
     font-size: 2rem;
   }
+
+  .question-options label {
+    display: block;
+    margin-bottom: 0.5rem;
+    width: fit-content;
+  }
 }
 
 .header-content {
@@ -318,16 +377,8 @@
 }
 
 /* Additional styles for questionnaire elements */
-.question-item {
-  margin-bottom: 1.5rem;
-}
-
 .question-options {
   margin-top: 0.5rem;
-}
-
-.question-options label {
-  margin-right: 1.5rem;
 }
 
 .result-section {

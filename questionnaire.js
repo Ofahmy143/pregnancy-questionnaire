@@ -272,22 +272,24 @@ class DelfinaQuestionnaire {
   renderQuestions() {
     const questionsList = document.querySelector(".questions-list");
     const ui = this.languages[this.currentLang].ui;
-    questionsList.innerHTML = ""; // Clear existing questions
+    questionsList.innerHTML = "";
 
     this.questions.forEach((question) => {
       const questionElement = document.createElement("div");
       questionElement.className = "question-item";
       questionElement.innerHTML = `
-                <p>${question.id}. ${question.text}</p>
-                <div class="question-options">
-                    <label>
-                        <input type="radio" name="question${question.id}" value="yes"> ${ui.yes}
-                    </label>
-                    <label>
-                        <input type="radio" name="question${question.id}" value="no"> ${ui.no}
-                    </label>
-                </div>
-            `;
+        <p>${question.id}. ${question.text}</p>
+        <div class="question-options">
+          <label>
+            <input type="radio" name="question${question.id}" value="yes">
+            <span>${ui.yes}</span>
+          </label>
+          <label>
+            <input type="radio" name="question${question.id}" value="no">
+            <span>${ui.no}</span>
+          </label>
+        </div>
+      `;
       questionsList.appendChild(questionElement);
     });
   }
