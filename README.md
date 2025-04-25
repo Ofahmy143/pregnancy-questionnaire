@@ -25,13 +25,10 @@ To add this questionnaire to your website, simply add:
 <!-- Add these to your head or before closing body tag -->
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/Ofahmy143/pregnancy-questionnaire@{release-tag}/questionnaire.min.css"
+  href="https://cdn.jsdelivr.net/gh/Ofahmy143/pregnancy-questionnaire@latest/questionnaire.min.css"
 />
-<script src="https://cdn.jsdelivr.net/gh/Ofahmy143/pregnancy-questionnaire@{release-tag}/questionnaire.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Ofahmy143/pregnancy-questionnaire@latest/questionnaire.min.js"></script>
 ```
-
-Replace `{release-tag}` with the latest release tag (e.g., "v1.0.0"). You can find the latest release on the [GitHub releases page](https://github.com/Ofahmy143/pregnancy-questionnaire/releases).
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
