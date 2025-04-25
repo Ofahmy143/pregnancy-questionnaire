@@ -1,6 +1,12 @@
-# Delfina Pregnancy Questionnaire
+# Preconception Medical Assessment
 
 A bilingual (English/Spanish) interactive questionnaire for pregnancy risk assessment.
+
+The content in this assessment was taken from the [PreMA Quiz](https://osg.ca.gov/prema/)
+developed by the Office of the California Surgeon General. The PDF versions for
+[English](https://osg.ca.gov/wp-content/uploads/sites/266/2025/01/PreMA_Quiz_web.pdf)
+and [Spanish](https://osg.ca.gov/wp-content/uploads/sites/266/2025/03/PreMA_Quiz_R4_SP.pdf) 
+were converted into a responsive web layout.
 
 ## Features
 
@@ -32,6 +38,16 @@ To add this questionnaire to your website, simply add:
 
 Replace `{release-tag}` with the latest release tag (e.g., "v1.0.0"). You can find the latest release on the [GitHub releases page](https://github.com/Ofahmy143/pregnancy-questionnaire/releases).
 
+
+## Disclaimer
+Delfina Care Inc is not a medical group and does not provide medical advice, care, or treatment.
+USING, ACCESSING, OR BROWSING THIS CODE OR SERVICE DOES NOT CREATE A PHYSICIAN-PATIENT,
+PROFESSIONAL-CLIENT, OR SIMILAR RELATIONSHIP BETWEEN YOU AND DELFINA CARE INC. NOTHING CONTAINED
+HEREIN IS INTENDED TO CREATE A PHYSICIAN-PATIENT, PROFESSIONAL-CLIENT, OR SIMILAR RELATIONSHIP
+TO REPLACE THE SERVICES OF A LICENSED, TRAINED PHYSICIAN OR HEALTH PROFESSIONAL, OR TO BE A
+SUBSTITUTE FOR MEDICAL ADVICE OF A PHYSICIAN OR TRAINED HEALTH PROFESSIONAL LICENSED IN YOUR
+STATE. YOU SHOULD NOT RELY ON ANYTHING CONTAINED HEREIN, AND YOU SHOULD CONSULT A PHYSICIAN
+LICENSED IN YOUR STATE IN ALL MATTERS RELATING TO YOUR HEALTH.
 
 ## License
 
