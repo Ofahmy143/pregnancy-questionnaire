@@ -1,4 +1,4 @@
-class DelfinaQuestionnaire {
+class PreconceptionMedicalAssessment {
   constructor() {
     this.languages = {
       en: {
@@ -159,14 +159,16 @@ class DelfinaQuestionnaire {
   }
 
   init() {
-    const container = document.getElementById("delfina-questionnaire");
+    const container = document.getElementById(
+      "preconception-medical-assessment"
+    );
     if (!container) return;
 
     const ui = this.languages[this.currentLang].ui;
 
     container.innerHTML = `
-      <div class="delfina-container">
-        <div class="delfina-header">
+      <div class="prema-container">
+        <div class="prema-header">
           <div class="header-content">
             <h1>${ui.title}</h1>
             <div class="language-selector">
@@ -188,12 +190,12 @@ class DelfinaQuestionnaire {
           <p>${ui.subtitle}</p>
         </div>
         
-        <div class="delfina-content">
-          <div class="delfina-questions">
+        <div class="prema-content">
+          <div class="prema-questions">
             <h2>${ui.quizTitle}</h2>
             <div class="questions-list"></div>
           </div>
-          <div class="delfina-tips">
+          <div class="prema-tips">
             <h2>
               <span class="tips-icon">✨</span>
               ${ui.tipsTitle}
@@ -357,10 +359,10 @@ class DelfinaQuestionnaire {
 
 // Initialize the questionnaire when the script loads
 document.addEventListener("DOMContentLoaded", () => {
-  window.delfinaQuestionnaire = new DelfinaQuestionnaire();
+  window.preconceptionMedicalAssessment = new PreconceptionMedicalAssessment();
 
   // Add default lang as browser lang
   const defaultLang = navigator.language.startsWith("es") ? "es" : "en";
-  window.delfinaQuestionnaire.currentLang = defaultLang;
-  window.delfinaQuestionnaire.init();
+  window.preconceptionMedicalAssessment.currentLang = defaultLang;
+  window.preconceptionMedicalAssessment.init();
 });

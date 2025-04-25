@@ -1,11 +1,11 @@
 /* Reset and base styles */
-.delfina-container * {
+.prema-container * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.delfina-container {
+.prema-container {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, sans-serif;
   max-width: 1000px;
@@ -20,12 +20,12 @@
 }
 
 /* Header styles */
-.delfina-header {
+.prema-header {
   text-align: left;
   margin-bottom: 2rem;
 }
 
-.delfina-header h1 {
+.prema-header h1 {
   color: #e91e63;
   font-size: 2.25rem;
   margin-bottom: 1rem;
@@ -34,7 +34,7 @@
   letter-spacing: -0.01em;
 }
 
-.delfina-header p {
+.prema-header p {
   color: #333;
   font-size: 1.125rem;
   font-weight: 400;
@@ -44,7 +44,7 @@
 }
 
 /* Content layout */
-.delfina-content {
+.prema-content {
   position: relative;
   display: flex;
   gap: 2rem;
@@ -53,12 +53,12 @@
   padding-bottom: 4rem;
 }
 
-.delfina-questions {
+.prema-questions {
   flex: 1;
 }
 
 /* Questions section */
-.delfina-questions h2 {
+.prema-questions h2 {
   color: #e91e63;
   font-size: 1.75rem;
   margin-bottom: 1.5rem;
@@ -187,7 +187,7 @@
 }
 
 /* Tips section */
-.delfina-tips {
+.prema-tips {
   width: 350px;
   background: #e91e63;
   color: white;
@@ -198,7 +198,7 @@
   top: 20px;
 }
 
-.delfina-tips h2 {
+.prema-tips h2 {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -318,22 +318,22 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .delfina-content {
+  .prema-content {
     flex-direction: column;
   }
 
-  .delfina-tips {
+  .prema-tips {
     width: 100%;
     position: static;
   }
 }
 
 @media (max-width: 480px) {
-  .delfina-header h1 {
+  .prema-header h1 {
     font-size: 1.75rem;
   }
 
-  .delfina-header p {
+  .prema-header p {
     font-size: 1rem;
   }
 

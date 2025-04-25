@@ -1,6 +1,6 @@
 # Preconception Medical Assessment
 
-A bilingual (English/Spanish) interactive questionnaire for pregnancy risk assessment.
+A bilingual (English/Spanish) interactive questionnaire for preconception health assessment.
 
 The content in this assessment was taken from the [PreMA Quiz](https://osg.ca.gov/prema/)
 developed by the Office of the California Surgeon General. The PDF versions for
@@ -26,18 +26,15 @@ To add this questionnaire to your website, simply add:
 
 ```html
 <!-- Add this where you want the questionnaire to appear -->
-<div id="delfina-questionnaire"></div>
+<div id="preconception-medical-assessment"></div>
 
 <!-- Add these to your head or before closing body tag -->
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/Ofahmy143/pregnancy-questionnaire@{release-tag}/questionnaire.min.css"
+  href="https://cdn.jsdelivr.net/gh/Ofahmy143/pregnancy-questionnaire@latest/questionnaire.min.css"
 />
-<script src="https://cdn.jsdelivr.net/gh/Ofahmy143/pregnancy-questionnaire@{release-tag}/questionnaire.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Ofahmy143/pregnancy-questionnaire@latest/questionnaire.min.js"></script>
 ```
-
-Replace `{release-tag}` with the latest release tag (e.g., "v1.0.0"). You can find the latest release on the [GitHub releases page](https://github.com/Ofahmy143/pregnancy-questionnaire/releases).
-
 
 ## Disclaimer
 Delfina Care Inc is not a medical group and does not provide medical advice, care, or treatment.
@@ -48,6 +45,7 @@ TO REPLACE THE SERVICES OF A LICENSED, TRAINED PHYSICIAN OR HEALTH PROFESSIONAL,
 SUBSTITUTE FOR MEDICAL ADVICE OF A PHYSICIAN OR TRAINED HEALTH PROFESSIONAL LICENSED IN YOUR
 STATE. YOU SHOULD NOT RELY ON ANYTHING CONTAINED HEREIN, AND YOU SHOULD CONSULT A PHYSICIAN
 LICENSED IN YOUR STATE IN ALL MATTERS RELATING TO YOUR HEALTH.
+
 
 ## License
 

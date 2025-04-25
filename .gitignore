@@ -2,6 +2,9 @@
 *.min.js
 *.min.css
 
+# Ignore logo file
+logomark.svg
+
 # Common files to ignore
 node_modules/
 .DS_Store
