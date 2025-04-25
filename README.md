@@ -1,15 +1,21 @@
-# Pregnancy Questionnaire Widget
+# Delfina Pregnancy Questionnaire
 
-A simple, embeddable questionnaire widget for pregnancy-related information collection.
+A bilingual (English/Spanish) interactive questionnaire for pregnancy risk assessment.
+
+## Features
+
+- Bilingual support (English and Spanish)
+- Automatic language detection based on browser settings
+- Risk assessment with color-coded results
+- Easy integration into any website
 
 ## Demo
 
-You can see the questionnaire in action here:
-https://ofahmy143.github.io/pregnancy-questionnaire/
+You can see a live demo by opening the `index.html` file in this repository.
 
 ## Quick Start
 
-Add the following code to your HTML where you want the questionnaire to appear:
+To add this questionnaire to your website, simply add:
 
 ```html
 <!-- Add this where you want the questionnaire to appear -->
@@ -18,20 +24,18 @@ Add the following code to your HTML where you want the questionnaire to appear:
 <!-- Add these to your head or before closing body tag -->
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/Ofahmy143/pregnancy-questionnaire/questionnaire.css"
+  href="https://cdn.jsdelivr.net/gh/Ofahmy143/pregnancy-questionnaire/questionnaire.min.css"
 />
-<script src="https://cdn.jsdelivr.net/gh/Ofahmy143/pregnancy-questionnaire/questionnaire.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Ofahmy143/pregnancy-questionnaire/questionnaire.min.js"></script>
 ```
 
-## Features
+## Available Files
 
-- Clean, modern interface
-- Mobile-responsive design
-- Easy to integrate
-- Customizable styling through CSS
-- Multilingual Support (en - es)
-
-## Installation Options
+- `questionnaire.js` - Main JavaScript class and functionality
+- `questionnaire.css` - Styles for the questionnaire
+- `questionnaire.min.js` - Minified JavaScript (auto-generated)
+- `questionnaire.min.css` - Minified CSS (auto-generated)
+- `index.html` - Demo implementation
 
 ### 1. CDN (Recommended)
 
@@ -45,6 +49,4 @@ You can also download and host the files yourself:
 2. Host them on your server
 3. Update the paths in the HTML code to point to your hosted files
 
-## Customization
-
-You can override the default styles by adding your own CSS rules after the questionnaire's stylesheet.
+Open-sourced with ❤️ by Delfina
