@@ -18,7 +18,7 @@ were converted into a responsive web layout.
 
 ## Demo
 
-You can see a live demo by opening the `index.html` file in this repository.
+You can see a live demo [here](https://ofahmy143.github.io/pregnancy-questionnaire/)
 
 ## Quick Start
 
