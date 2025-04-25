@@ -208,7 +208,7 @@ class DelfinaQuestionnaire {
         </div>
 
         <div class="logo-placeholder">
-          <img src="./logomark.svg" alt="Logo" /> open sourced with &#10084; by Delfina
+          open sourced with &#10084; by <a href="https://github.com/DelfinaCare/preconception-medical-assessment" target="_blank">Delfina</a>
         </div>
       </div>
     `;
