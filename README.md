@@ -1,6 +1,6 @@
-# Delfina Pregnancy Questionnaire
+# Preconception Medical Assessment
 
-A bilingual (English/Spanish) interactive questionnaire for pregnancy risk assessment.
+A bilingual (English/Spanish) interactive questionnaire for preconception health assessment.
 
 ## Features
 
@@ -20,7 +20,7 @@ To add this questionnaire to your website, simply add:
 
 ```html
 <!-- Add this where you want the questionnaire to appear -->
-<div id="delfina-questionnaire"></div>
+<div id="preconception-medical-assessment"></div>
 
 <!-- Add these to your head or before closing body tag -->
 <link
@@ -31,7 +31,6 @@ To add this questionnaire to your website, simply add:
 ```
 
 Replace `{release-tag}` with the latest release tag (e.g., "v1.0.0"). You can find the latest release on the [GitHub releases page](https://github.com/Ofahmy143/pregnancy-questionnaire/releases).
-
 
 ## License
 
