@@ -210,7 +210,7 @@ class PreconceptionMedicalAssessment {
         </div>
 
         <div class="logo-placeholder">
-          open sourced with &#10084; by <a href="https://github.com/DelfinaCare/preconception-medical-assessment" target="_blank">Delfina</a>
+          <a href="https://github.com/DelfinaCare/preconception-medical-assessment" target="_blank">Open sourced</a> with &#10084; by <a href="https://delfina.com" target="_blank">Delfina</a>. This is not a substitute for medical advice.
         </div>
       </div>
     `;
